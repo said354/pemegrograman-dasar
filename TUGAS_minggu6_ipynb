@@ -1,0 +1,194 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNz2achjBqXct8vUmBCKUFO",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/said354/pemegrograman-dasar/blob/main/TUGAS_minggu6_ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "no69NACsUHkK",
+        "outputId": "c1cd665f-e453-40ab-97a8-b5564cec569a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan angka: 5\n",
+            "Kelipatan 5\n",
+            "Masukkan tahun: 4\n",
+            "Tahun kabisat\n"
+          ]
+        }
+      ],
+      "source": [
+        "angka = int(input(\"Masukkan angka: \"))\n",
+        "\n",
+        "if angka % 5 == 0:\n",
+        "    print(\"Kelipatan 5\")\n",
+        "else:\n",
+        "    print(\"Bukan kelipatan 5\")\n",
+        "\n",
+        "\n",
+        "tahun = int(input(\"Masukkan tahun: \"))\n",
+        "\n",
+        "if tahun % 400 == 0:\n",
+        "    print(\"Tahun kabisat\")\n",
+        "elif tahun % 4 == 0 and tahun % 100 != 0:\n",
+        "    print(\"Tahun kabisat\")\n",
+        "else:\n",
+        "    print(\"Bukan tahun kabisat\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"Masukkan bilangan bulat (1-5): \"))\n",
+        "\n",
+        "if n < 1 or n > 5:\n",
+        "    print(\"Input tidak valid. Masukkan bilangan antara 1 sampai 5.\")\n",
+        "elif n == 1:\n",
+        "    print(\"1! = 1\")\n",
+        "elif n == 2:\n",
+        "    print(\"2! = 2\")\n",
+        "elif n == 3:\n",
+        "    print(\"3! = 6\")\n",
+        "elif n == 4:\n",
+        "    print(\"4! = 24\")\n",
+        "else:\n",
+        "    print(\"5! = 120\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gBK0X7PGWDyI",
+        "outputId": "50f7ca37-7ed3-4582-cb7c-a74f68baa549"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan bilangan bulat (1-5): 3\n",
+            "3! = 6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "faktor_daya = float(input(\"Masukkan faktor daya (0.0 - 1.0): \"))\n",
+        "efisiensi = float(input(\"Masukkan efisiensi distribusi (%): \"))\n",
+        "\n",
+        "skor = faktor_daya * efisiensi\n",
+        "\n",
+        "print(f\"Skor kualitas daya: {skor:.2f}\")\n",
+        "\n",
+        "if skor >= 85 and faktor_daya >= 0.90:\n",
+        "    klasifikasi = \"PRIMA — sistem dalam kondisi optimal\"\n",
+        "elif skor >= 70 and faktor_daya >= 0.80:\n",
+        "    klasifikasi = \"BAIK — sistem memadai, pantau rutin\"\n",
+        "elif skor >= 50 or faktor_daya >= 0.75:\n",
+        "    klasifikasi = \"CUKUP — ada ruang perbaikan\"\n",
+        "else:\n",
+        "    klasifikasi = \"BURUK — perlu perbaikan segera\"\n",
+        "\n",
+        "print(f\"Faktor daya {faktor_daya}, efisiensi {efisiensi}% -> Klasifikasi: {klasifikasi}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LD9ODmmGXEfu",
+        "outputId": "ab6631c1-42c2-4192-beca-7d7ebe2564a3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan faktor daya (0.0 - 1.0): 0.95\n",
+            "Masukkan efisiensi distribusi (%): 92\n",
+            "Skor kualitas daya: 87.40\n",
+            "Faktor daya 0.95, efisiensi 92.0% -> Klasifikasi: PRIMA — sistem dalam kondisi optimal\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "iradiasi = float(input(\"Masukkan iradiasi matahari (W/m²): \"))\n",
+        "soc = float(input(\"Masukkan SoC baterai (%): \"))\n",
+        "\n",
+        "daya_panel = iradiasi * 0.18 * 10\n",
+        "\n",
+        "print(f\"Estimasi daya panel: {daya_panel:.1f} W\")\n",
+        "\n",
+        "if iradiasi > 600 and soc < 80:\n",
+        "    mode = \"CHARGING — prioritaskan pengisian baterai\"\n",
+        "elif iradiasi > 600 and soc >= 80:\n",
+        "    mode = \"GRID-EXPORT — ekspor kelebihan daya ke jaringan\"\n",
+        "elif iradiasi > 200 and soc >= 20:\n",
+        "    mode = \"NORMAL — operasi mandiri\"\n",
+        "elif iradiasi <= 200 and soc >= 50:\n",
+        "    mode = \"BATTERY-ONLY — andalkan baterai\"\n",
+        "else:\n",
+        "    mode = \"EMERGENCY — kurangi beban segera\"\n",
+        "\n",
+        "print(f\"Iradiasi {iradiasi} W/m², SoC {soc}% -> Mode: {mode}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FQs2czfdZlcS",
+        "outputId": "e97144fb-7035-4009-bf43-4bf9652deace"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan iradiasi matahari (W/m²): 400\n",
+            "Masukkan SoC baterai (%): 55\n",
+            "Estimasi daya panel: 720.0 W\n",
+            "Iradiasi 400.0 W/m², SoC 55.0% -> Mode: NORMAL — operasi mandiri\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
